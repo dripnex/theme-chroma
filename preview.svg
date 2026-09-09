@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Chroma editor preview">
+<!-- Dripnex-like notes editor, painted with this theme's tokens. Not a marketing card. -->
+<rect width="960" height="540" fill="#08080c"/>
+<!-- Titlebar -->
+<rect x="0" y="0" width="960" height="42" fill="#101018"/>
+<line x1="0" y1="42" x2="960" y2="42" stroke="rgba(232, 251, 255, 0.12)" stroke-width="1"/>
+<circle cx="22" cy="21" r="6" fill="#ff5f57"/>
+<circle cx="42" cy="21" r="6" fill="#febc2e"/>
+<circle cx="62" cy="21" r="6" fill="#28c840"/>
+<text x="84" y="26" fill="rgba(232, 251, 255, 0.52)" font-size="12" font-weight="600" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Dripnex</text>
+<text x="480.0" y="26" text-anchor="middle" fill="#e8fbff" font-size="12.5" font-weight="600" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">RGB bleed</text>
+<text x="942" y="26" text-anchor="end" fill="rgba(232, 251, 255, 0.34)" font-size="11" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Chroma</text>
+<!-- Sidebar -->
+<rect x="0" y="42" width="248" height="498" fill="#101018"/>
+<line x1="248" y1="42" x2="248" y2="540" stroke="rgba(232, 251, 255, 0.12)" stroke-width="1"/>
+<text x="18" y="70" fill="#e8fbff" font-size="13" font-weight="700" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Notes</text>
+<rect x="14" y="82" width="220" height="28" rx="8" fill="#040408"/>
+<text x="26" y="100" fill="rgba(232, 251, 255, 0.34)" font-size="11" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Search notes</text>
+<rect x="8" y="128" width="232" height="56" rx="8" fill="rgba(0, 229, 255, 0.2)"/><rect x="8" y="128" width="3" height="56" rx="1.5" fill="#00e5ff"/>
+<text x="22" y="152" fill="#00e5ff" font-size="13" font-weight="600" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">RGB bleed</text><text x="22" y="170" fill="rgba(232, 251, 255, 0.52)" font-size="11" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Cyan edge on black glass.</text>
+<text x="22" y="216" fill="#e8fbff" font-size="13" font-weight="600" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Prism trail</text><text x="22" y="234" fill="rgba(232, 251, 255, 0.52)" font-size="11" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Color smears across the void.</text>
+<text x="22" y="280" fill="#e8fbff" font-size="13" font-weight="600" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Night chroma</text><text x="22" y="298" fill="rgba(232, 251, 255, 0.52)" font-size="11" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Black stage, electric marks.</text>
+<text x="22" y="344" fill="#e8fbff" font-size="13" font-weight="600" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Bleed map</text><text x="22" y="362" fill="rgba(232, 251, 255, 0.52)" font-size="11" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Hue where the silence was.</text>
+<!-- Main editor pane -->
+<rect x="248" y="42" width="712" height="470" fill="#08080c"/>
+<text x="284" y="90" fill="#e8fbff" font-size="28" font-weight="700" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">RGB bleed</text>
+<text x="284" y="114" fill="rgba(232, 251, 255, 0.34)" font-size="11" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Today &#183; Markdown</text>
+<text x="284" y="154" fill="#e8fbff" font-size="14" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">The black was still wet when I sat down.</text>
+<text x="284" y="176" fill="#e8fbff" font-size="14" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">I wrote</text>
+<rect x="334" y="162" width="104" height="18" rx="4" fill="#040408"/>
+<text x="342" y="175" fill="#00e5ff" font-size="12" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace">chromaBleed()</text>
+<text x="444" y="176" fill="#e8fbff" font-size="14" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">and let the RGB settle — the smear was the point.</text>
+<!-- Blockquote -->
+<rect x="284" y="198" width="640" height="44" rx="6" fill="rgba(0, 229, 255, 0.1)"/>
+<rect x="284" y="198" width="4" height="44" rx="2" fill="#00e5ff"/>
+<text x="302" y="225" fill="rgba(232, 251, 255, 0.52)" font-size="14" font-style="italic" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Psychedelic chroma. RGB bleed on black. One trail is enough.</text>
+<!-- List -->
+<circle cx="292" cy="268" r="3" fill="#00e5ff"/>
+<text x="304" y="272" fill="#e8fbff" font-size="14" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">black first</text>
+<circle cx="292" cy="292" r="3" fill="#00e5ff"/>
+<text x="304" y="296" fill="#e8fbff" font-size="14" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">then the bleed</text>
+<circle cx="292" cy="316" r="3" fill="#00e5ff"/>
+<text x="304" y="320" fill="#e8fbff" font-size="14" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">then the hush</text>
+<text x="284" y="358" fill="#e8fbff" font-size="14" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">See also</text>
+<text x="344" y="358" fill="#00e5ff" font-size="14" text-decoration="underline" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Prism trail</text>
+<text x="436" y="358" fill="#e8fbff" font-size="14" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">when the hue opens again.</text>
+<!-- Status bar -->
+<rect x="0" y="512" width="960" height="28" fill="#101018"/>
+<line x1="0" y1="512" x2="960" y2="512" stroke="rgba(232, 251, 255, 0.12)" stroke-width="1"/>
+<text x="16" y="530" fill="rgba(232, 251, 255, 0.34)" font-size="11" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Markdown</text>
+<text x="264" y="530" fill="rgba(232, 251, 255, 0.34)" font-size="11" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">128 words</text>
+<text x="944" y="530" text-anchor="end" fill="rgba(232, 251, 255, 0.34)" font-size="11" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">Chroma</text>
+</svg>
