@@ -1,0 +1,36 @@
+name: Pack on tag
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  pack:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build dist
+        run: mkdir -p dist && cp src/index.js dist/index.js
+
+      - name: Pack tarball
+        run: |
+          ID=$(jq -r .id manifest.json)
+          VER=$(jq -r .version manifest.json)
+          NAME=$(jq -r .name manifest.json)
+          tar -czf "${ID}-${VER}.tar.gz" manifest.json dist theme.json
+          echo "ASSET=${ID}-${VER}.tar.gz" >> "$GITHUB_ENV"
+          echo "THEME_NAME=${NAME}" >> "$GITHUB_ENV"
+          echo "THEME_VER=${VER}" >> "$GITHUB_ENV"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: ${{ env.THEME_NAME }} ${{ env.THEME_VER }}
+          body: Official Dripnex theme pack for Settings → Plugins Browse.
+          files: ${{ env.ASSET }}

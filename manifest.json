@@ -1,0 +1,7 @@
+{
+  "id": "theme-chroma",
+  "name": "Chroma",
+  "version": "0.1.0",
+  "description": "Psychedelic chroma. RGB bleed on black.",
+  "main": "dist/index.js"
+}

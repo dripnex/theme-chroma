@@ -1,0 +1,51 @@
+name: Bootstrap v0.1.0 release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Skip if v0.1.0 release exists
+        id: check
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if gh release view v0.1.0 >/dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build dist
+        if: steps.check.outputs.exists == 'false'
+        run: mkdir -p dist && cp src/index.js dist/index.js
+
+      - name: Pack tarball
+        if: steps.check.outputs.exists == 'false'
+        run: |
+          ID=$(jq -r .id manifest.json)
+          VER=$(jq -r .version manifest.json)
+          NAME=$(jq -r .name manifest.json)
+          tar -czf "${ID}-${VER}.tar.gz" manifest.json dist theme.json
+          echo "ASSET=${ID}-${VER}.tar.gz" >> "$GITHUB_ENV"
+          echo "THEME_NAME=${NAME}" >> "$GITHUB_ENV"
+          echo "THEME_VER=${VER}" >> "$GITHUB_ENV"
+
+      - name: Create GitHub Release
+        if: steps.check.outputs.exists == 'false'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v0.1.0
+          name: ${{ env.THEME_NAME }} ${{ env.THEME_VER }}
+          body: Theme pack with theme.json so Settings → Themes can parse the palette without PluginHost.
+          files: ${{ env.ASSET }}
